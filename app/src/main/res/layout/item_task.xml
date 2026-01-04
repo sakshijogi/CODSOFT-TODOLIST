@@ -1,0 +1,87 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@android:color/white"
+    android:foreground="?attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Checkbox -->
+        <CheckBox
+            android:id="@+id/cbCompleted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/purple_500"
+            android:layout_centerVertical="true" />
+
+        <!-- Task Title -->
+        <TextView
+            android:id="@+id/tvTaskTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/cbCompleted"
+            android:layout_marginStart="12dp"
+            android:text="Task Title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#212121" />
+
+        <!-- Task Description -->
+        <TextView
+            android:id="@+id/tvTaskDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTaskTitle"
+            android:layout_toEndOf="@id/cbCompleted"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:text="Task description goes here"
+            android:textSize="14sp"
+            android:textColor="#757575" />
+
+        <!-- Task Date -->
+        <TextView
+            android:id="@+id/tvTaskDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTaskDescription"
+            android:layout_toEndOf="@id/cbCompleted"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="6dp"
+            android:text="Due: 12 Jan 2026"
+            android:textSize="12sp"
+            android:textColor="#9E9E9E" />
+
+        <!-- Edit Button -->
+        <ImageButton
+            android:id="@+id/btnEdit"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/baseline_edit_24"
+            android:background="@android:color/transparent"
+            android:tint="@color/purple_500"
+            android:contentDescription="Edit Task" />
+
+        <!-- Delete Button -->
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_toStartOf="@id/btnEdit"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/baseline_delete_24"
+            android:background="@android:color/transparent"
+            android:tint="#F44336"
+            android:contentDescription="Delete Task" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
